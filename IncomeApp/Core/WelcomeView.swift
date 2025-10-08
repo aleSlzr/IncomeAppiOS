@@ -42,7 +42,7 @@ private extension WelcomeView {
     }
 
     var welcomeText: some View {
-        Text("Effortlessly calcula your income.\nLet's get started!")
+        Text("Effortlessly calculate your income.\nLet's get started!")
             .font(.title3)
             .fontWeight(.medium)
             .multilineTextAlignment(.center)

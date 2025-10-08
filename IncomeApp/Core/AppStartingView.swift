@@ -14,7 +14,7 @@ struct AppStartingView: View {
             if viewModel.shouldShowWelcomeView {
                 WelcomeView(shouldShowWelcomeView: $viewModel.shouldShowWelcomeView)
             } else {
-                HomeTabView()
+                HomeView()
             }
         }.animation(.easeIn, value: viewModel.shouldShowWelcomeView)
     }
