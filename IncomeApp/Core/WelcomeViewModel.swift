@@ -7,10 +7,13 @@
 
 import Foundation
 import Combine
+import Factory
 
 @MainActor
 final class WelcomeViewModel: ObservableObject {
+    @Injected(\.appInfoStore) var appInfoStore
+    
     func getAppName() -> String {
-        "Income Ultra"
+        appInfoStore.name
     }
 }
