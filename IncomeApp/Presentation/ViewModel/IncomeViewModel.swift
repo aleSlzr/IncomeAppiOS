@@ -10,6 +10,7 @@ import Combine
 import Factory
 
 final class IncomeViewModel: ObservableObject {
+    @Published var incomePickerValue: IncomePickerView.IncomeType = .salary
     @Injected(\.incomeStore) var incomeStore
     @Injected(\.appInfoStore) var appInfoStore
     
