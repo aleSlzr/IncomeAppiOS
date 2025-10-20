@@ -34,6 +34,10 @@ extension AppShadow {
     static var top : Self = .init(color: .black.opacity(0.1), radius: 2, x: 0, y: -2)
 }
 
+#Preview {
+    Preview()
+}
+
 fileprivate struct Preview: View {
     var body: some View {
         Text("Button Regular Shadow")
@@ -49,8 +53,4 @@ fileprivate struct Preview: View {
             .padding()
             .background(Color.appTheme.viewBackground)
     }
-}
-
-#Preview {
-    Preview()
 }

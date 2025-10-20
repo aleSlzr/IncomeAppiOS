@@ -26,6 +26,10 @@ extension AppCornerRadius {
     static var pill: Self = .init(value: 30)
 }
 
+#Preview {
+    Preview()
+}
+
 fileprivate struct Preview: View {
     var body: some View {
         Text("Calculate")
@@ -41,8 +45,4 @@ fileprivate struct Preview: View {
             .infinityFrame()
             .background(Color.appTheme.viewBackground)
     }
-}
-
-#Preview {
-    Preview()
 }

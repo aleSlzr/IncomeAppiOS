@@ -111,6 +111,10 @@ extension IncomePickerView.IncomeType: CustomStringConvertible {
 
 extension IncomePickerView.IncomeType: CaseIterable {}
 
+#Preview {
+    Preview()
+}
+
 fileprivate struct Preview: View {
     @State
     private var incomeType: IncomePickerView.IncomeType = .hourly
@@ -120,8 +124,4 @@ fileprivate struct Preview: View {
             .infinityFrame()
             .background(Color.appTheme.viewBackground)
     }
-}
-
-#Preview {
-    Preview()
 }

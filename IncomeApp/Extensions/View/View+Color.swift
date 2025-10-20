@@ -57,6 +57,16 @@ extension Color {
     }
 }
 
+#Preview("Light Mode") {
+    Preview()
+        .preferredColorScheme(.light)
+}
+
+#Preview("Dark Mode") {
+    Preview()
+        .preferredColorScheme(.dark)
+}
+
 fileprivate struct Preview: View {
     var body: some View {
         VStack {
@@ -81,14 +91,4 @@ fileprivate struct Preview: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appTheme.viewBackground)
     }
-}
-
-#Preview("Light Mode") {
-    Preview()
-        .preferredColorScheme(.light)
-}
-
-#Preview("Dark Mode") {
-    Preview()
-        .preferredColorScheme(.dark)
 }

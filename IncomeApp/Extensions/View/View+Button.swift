@@ -49,6 +49,10 @@ extension View {
     }
 }
 
+#Preview {
+    Preview()
+}
+
 fileprivate struct Preview: View {
     var body: some View {
         VStack(spacing: 24) {
@@ -68,8 +72,4 @@ fileprivate struct Preview: View {
         .infinityFrame()
         .background(Color.appTheme.viewBackground)
     }
-}
-
-#Preview {
-    Preview()
 }
