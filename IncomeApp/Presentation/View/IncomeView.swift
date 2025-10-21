@@ -17,6 +17,7 @@ struct IncomeView: View {
             .toolbar {
                 toolbarItems
             }
+            .background(Color.appTheme.viewBackground)
     }
 }
 
@@ -34,6 +35,7 @@ private extension IncomeView {
             }
             .padding(.horizontal)
             .padding(.vertical, 8)
+            .background(Color.appTheme.viewBackground)
         }
     }
     
@@ -62,8 +64,11 @@ private extension IncomeView {
         )
     }
     
+    @ViewBuilder
     var salaryOutputView: some View {
-        Text("salary output view")
+        SingleOutputView(name: "Hourly Wage", output: viewModel.salaryOutput.hourlyWage)
+        PayOutputView(pay: viewModel.salaryOutput.takeHomePay)
+        PayOutputView(pay: viewModel.salaryOutput.grossPay)
     }
     
     @ViewBuilder
@@ -105,8 +110,10 @@ private extension IncomeView {
         }
     }
     
+    @ViewBuilder
     var hourlyOutputView: some View {
-        Text("hourly output view")
+        PayOutputView(pay: viewModel.hourlyOutput.takeHomePay)
+        PayOutputView(pay: viewModel.hourlyOutput.grossPay)
     }
     
     @ToolbarContentBuilder
