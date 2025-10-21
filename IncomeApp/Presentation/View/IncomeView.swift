@@ -18,6 +18,7 @@ struct IncomeView: View {
                 toolbarItems
             }
             .background(Color.appTheme.viewBackground)
+            .hideKeyboardOnTap()
     }
 }
 
