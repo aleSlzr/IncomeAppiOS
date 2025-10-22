@@ -11,7 +11,7 @@ struct AppInfoLiveStore {
     let name: String = "Income Ultra"
     let description: String = "Income Ultra calculates your income from hourly rates or salary, including overtime, and provides detailed financial breakdowns"
     let developer: String = "Alejandro Salazar"
-    let website: String = "https://github.com/aleSlzr/IncomeAppiOS.git"
+    let website: String = "https://github.com/aleSlzr/IncomeAppiOS"
     let agreements: Agreements = .init()
     
     var version: String {
@@ -31,8 +31,8 @@ struct AppInfoLiveStore {
 
 extension AppInfoLiveStore {
     struct Agreements {
-        let privacyPolicyURL: String = "some url"
-        let termsAndConditionsURL: String = "some url"
-        let copyrightURL: String = "some url"
+        let privacyPolicyURL: String = "https://github.com/aleSlzr"
+        let termsAndConditionsURL: String = "https://github.com/aleSlzr"
+        let copyrightURL: String = "https://github.com/aleSlzr"
     }
 }

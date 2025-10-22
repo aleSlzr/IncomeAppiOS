@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct IncomeAppApp: App {
+    @AppStorage(UserDefaultKeys.isDarkmode) private var isDarkMode: Bool = true
+    
     var body: some Scene {
         WindowGroup {
             AppStartingView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

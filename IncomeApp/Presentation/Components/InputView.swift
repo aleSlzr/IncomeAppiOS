@@ -37,6 +37,20 @@ private extension InputView {
     }
 }
 
+extension InputView {
+    struct Info {
+        let name: String
+        let placeholder: String
+        let required: Bool
+        
+        init(name: String, placeholder: String, required: Bool = false) {
+            self.name = name
+            self.placeholder = placeholder
+            self.required = required
+        }
+    }
+}
+
 #Preview {
     Preview()
 }
@@ -49,19 +63,5 @@ fileprivate struct Preview: View {
             .padding()
             .infinityFrame()
             .background(Color.appTheme.viewBackground)
-    }
-}
-
-extension InputView {
-    struct Info {
-        let name: String
-        let placeholder: String
-        let required: Bool
-        
-        init(name: String, placeholder: String, required: Bool = false) {
-            self.name = name
-            self.placeholder = placeholder
-            self.required = required
-        }
     }
 }
